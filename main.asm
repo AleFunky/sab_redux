@@ -5522,11 +5522,8 @@ PUPs2:
              jmp PUPs
 LandEnemyProperly1:
              jmp LandEnemyProperly
-PutEnemyOnSlope2: 
 NoEToBGCollisionAndSlowdown:
              jmp DoSide2
-PutEnemyOnSlope1: 
-             
              ;jmp PutEnemyOnSlope
 Enemy_PSwitchJmp:
              jmp Enemy_PSwitch
@@ -5567,8 +5564,6 @@ HandleEToBGCollision:
              beq NoEToBGCollision2
              cmp #$91
              beq NoEToBGCollisionAndSlowdown
-             cmp #$71
-             beq PutEnemyOnSlope1
              ;pha
              ;ldy #$24
              ;jsr BlockBufferChk_Enemy
@@ -5842,7 +5837,6 @@ nosesabe3:
              jmp nosesabe2
 GetBlockCoin1:
              jmp GetBlockCoin
-PutEnemyOnSlope3: jmp PutEnemyOnSlope2
 nosesabe:
              cmp #$26       ;blank metatile used for vines?
              beq nosesabe3
@@ -5868,8 +5862,6 @@ nosesabe:
              beq nosesabe3
              cmp #$91
              beq nosesabe3
-             cmp #$71
-             beq PutEnemyOnSlope3
 cantasmal:
 +++:      sty temp6
              ldy EnemyOnSlope,x

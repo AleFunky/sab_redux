@@ -1,7 +1,7 @@
 from sys import argv
 feed = None
 if len(argv) < 2: feed = input("Enter output filename : ")
-else: feed = sys.arv[1]
+else: feed = argv[1]
 with open("export.bin", "rb") as f:
   source = f.read()
 payload, count, i = "", 0, 0
