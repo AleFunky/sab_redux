@@ -176,7 +176,7 @@ SecondIRQ:
 ThirdIRQ:
              cmp #$03
              bcs FourthIRQ
-             ldx #49
+             ldx #50
 -:
              dex
              bpl -
